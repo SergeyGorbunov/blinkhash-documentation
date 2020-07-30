@@ -1,15 +1,14 @@
-Introduction
-----
+## Introduction
 
 This repository contains the current documentation for the Blinkhash Mining Pools's backend REST API (v1). The API itself is relatively simple. Each of its endpoints were designed to be self-explanatory while still providing users with standardized JSON-formatted responses, making it easy to search, filter and use our data. The base URL for all requests is https://www.blinkhash.com/api/v1. The complete URL varies depending on the endpoint of the resource being accessed. For instance, you can view the statistics for each of our supported pools via a GET request to this URL: https://www.blinkhash.com/api/v1/statistics.
 
-Need Support?
-----
+### Need Support?
 
 If you need help with an API-related matter, the first place to look is our Discord channel, where the developers are available to answer any questions.
 
-Documentation
-----
+---
+
+## Documentation
 
 Each of the following endpoints follow a simple structure, to promote ease of use. The status codes and JSON-formatted responses are standardized throughout. Regarding authentication, we've decided not to include any, in order to retain transparency and help our users remain anonymous. The endpoints themselves are also cached for two minutes, and consist of the following:
 
@@ -23,8 +22,9 @@ Each of the following endpoints follow a simple structure, to promote ease of us
 
 The **Endpoint** field indicates the current endpoint, while the **Errors** field highlights any errors that may have arisen during the request. The **Data** field, on the other hand, contains the user's requested data.
 
-Blocks
-----
+---
+
+### Blocks
 
 The **Blocks** endpoint returns every block found by the users of the Blinkhash Mining Pool, separated into the individual pools supported and sorted by block height.  
 
@@ -74,8 +74,9 @@ worker=[worker]
 }
 ```
 
-History
-----
+---
+
+### History
 
 The **History** endpoint returns all historical data currently stored on the Blinkhash Mining Pool, separated into the individual pools supported. As this endpoint's main usage is for charting, each individual point of data is only stored for twelve hours (43200s) before being deleted.
 
@@ -110,8 +111,9 @@ pool=[pool]
 }
 ```
 
-Partners
-----
+---
+
+### Partners
 
 The **Partners** endpoint returns all currently active 'Partners' or 'Useful Links' for the Blinkhash Mining Pool. This most likely does not include all of them, however, as it only shows those with time left on their subscriptions.
 
@@ -136,8 +138,9 @@ The **Partners** endpoint returns all currently active 'Partners' or 'Useful Lin
 }
 ```
 
-Payments
-----
+---
+
+### Payments
 
 The **Payments** endpoint displays information on any payments sent out to users of the Blinkhash Mining Pool, sorted by the time that they were sent out.
 
@@ -209,8 +212,9 @@ worker=[worker]
 }
 ```
 
-Statistics
-----
+---
+
+### Statistics
 
 The **Statistics** endpoint displays basic information on each of the pools supported by the Blinkhash Mining Pool, including hashrate, ports, workers, and payments.
 
@@ -284,3 +288,133 @@ pool=[pool]
     ...
 }
 ```
+
+---
+
+### Wallets
+
+The **Wallets** endpoint takes in a wallet address as a parameter and returns all relevant data, including blocks, payments, and workers.
+
+* **Method:** GET
+* **URL:** https://www.blinkhash.com/api/v1/wallets
+* **Required Parameters:** 
+```
+worker=[worker]
+```
+* **Optional Parameters:** None
+* **Object (200):**
+```
+{
+    "worker": "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y",
+    "balance": "0.00000000",
+    "immature": "1435.48840000",
+    "paid": "49.49960000",
+    "unpaid": "0.00000000",
+    "total": "1484.98800000",
+    "blocks": {
+        "Blinkhash": [
+            {
+                "pool": "Blinkhash",
+                "symbol": "BHTC",
+                "algorithm": "scrypt",
+                "time": 1596084931511,
+                "height": 1408,
+                "blockHash": "9d7d0ee266822cde3fe228b720879bbeee550ba4377e988ddc18272ad3ad94b7",
+                "blockReward":50,
+                "txHash":"25282f5d30feb504fa4cbb0e76e14fe8f2275e733561161d9d32ce31227a5658",
+                "worker":"bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y",
+                "soloMined":true,
+                "confirmed":false,
+                "confirmations":"8"
+            },
+            {
+                "pool": "Blinkhash",
+                "symbol": "BHTC",
+                "algorithm": "scrypt",
+                "time": 1596084805666,
+                "height": 1404,
+                "blockHash": "44192a4bfa18af591bcb960db001841577cd7ac9741a8c101791aedc3850253c",
+                "blockReward": 50,
+                "txHash": "5e43d20b9aab81aaa029654db8acf81c1a183f8a8bcfd2313b4a1e266a6df143",
+                "worker": "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y",
+                "soloMined": true,
+                "confirmed": false,
+                "confirmations": "16"
+            },
+            ...
+        ],
+        ...
+    },
+    "payments": {
+        "Blinkhash":[
+            {
+                "time": 1596105713506,
+                "txid": "3a0e1a0383eb464dbe4d44a9c15fe2b714844b27b1fec124f95fae6b7c7d1962",
+                "shares": 176,
+                "workers": 3, 
+                "paid": 643.4948, 
+                "unpaid": {},
+                "records": [
+                    {
+                        "height": 1317,
+                        "amounts": {
+                            "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 49.4996
+                        },
+                        "shares": {
+                            "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 16
+                        },
+                        "times": {
+                            "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 1
+                        }
+                    },
+                    {
+                        "height": 1318,
+                        "amounts": {
+                            "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 16.49986667,
+                            "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 32.99973333
+                        },
+                        "shares": {
+                            "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi":8,
+                            "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm":16
+                        },
+                        "times": {
+                            "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 0,
+                            "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 1
+                        }
+                    },
+                    ...
+                ],
+                "totals": {
+                    "amounts": {
+                        "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 428.99653334,
+                        "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm":164.99866666, 
+                        "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y": 49.4996
+                    },
+                    "shares": {
+                        "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 112,
+                        "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 56,
+                        "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y": 8
+                    }
+                }
+            },
+            ...
+        ],
+        ...
+    },
+    "workers": {
+        Blinkhash: [
+            {
+                "address": "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y",
+                "difficulty": 8,
+                "validShares": 8,
+                "invalidShares": 0,
+                "hashrate": 1747.6266666666668,
+                "soloMining": true
+            },
+            ...
+        ],
+        ...
+    },
+}
+```
+

@@ -21,4 +21,117 @@ Each of the following endpoints follow a simple structure, to promote ease of us
 }
 ```
 
-The *endpoint* field indicates the current endpoint, while the *errors* field highlights any errors that may have arisen during the request. The *data* field, on the other hand, contains the user's requested data.
+The **Endpoint** field indicates the current endpoint, while the **Errors** field highlights any errors that may have arisen during the request. The **Data** field, on the other hand, contains the user's requested data.
+
+Blocks
+----
+
+The **Blocks** endpoint returns every block found by the users of the Blinkhash Mining Pool, separated into the individual pools supported and sorted by block height.  
+
+* **Method:** GET
+* **URL:** https://www.blinkhash.com/api/v1/blocks
+* **Required Parameters:** None 
+* **Optional Parameters:** 
+```
+pool=[pool]
+worker=[worker]
+```
+* **Success Response (200):**
+```
+{
+    endpoint: "blocks",
+    errors: "",
+    data: {
+        Blinkhash: [
+            {
+                "pool": "Blinkhash",
+                "symbol": "BHTC",
+                "algorithm": "scrypt",
+                "time": 1596089323305,
+                "height": 1416,
+                "blockHash": "ad8832bce1717f2e75da1104d3db929ca7f27cac0d98b325e0b512242d61a68d",
+                "blockReward":50,
+                "txHash":"291578aa7b9c7a0f254074b1b52df229fc493077abe9e3ea505c2e755529e648",
+                "worker":"M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi",
+                "soloMined":false,
+                "confirmed":false,
+                "confirmations":"1"
+            },
+            {
+                "pool": "Blinkhash",
+                "symbol": "BHTC",
+                "algorithm": "scrypt",
+                "time": 1596085696521,
+                "height": 1415,
+                "blockHash": "951c0fbcc035a27da35bb400f056be4030abc77d2d7b855761a17f2fedefddf4",
+                "blockReward": 50,
+                "txHash": "09d2b74894d6b314ce955a741394cdb1097c20bda94ac1ac5376b236bf4b180d",
+                "worker": "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi",
+                "soloMined": false,
+                "confirmed": false,
+                "confirmations": "2"
+            },
+            ...
+        ],
+        ...
+    },
+}
+```
+* **Failure Response (400):**
+```
+{
+    endpoint: "blocks",
+    errors: "...",
+    data: {},
+}
+```
+
+History
+----
+
+The **History** endpoint returns all historical data currently stored on the Blinkhash Mining Pool, separated into the individual pools supported. As this endpoint's main usage is for charting, each individual point of data is only stored for twelve hours (43200s) before being deleted.
+
+
+
+* **Method:** GET
+* **URL:** https://www.blinkhash.com/api/v1/history
+* **Required Parameters:** None 
+* **Optional Parameters:** 
+```
+pool=[pool]
+```
+* **Success Response (200):**
+```
+{
+    endpoint: "history",
+    errors: "",
+    data: {
+        Blinkhash: [
+            {
+                "time": 1596069584,
+                "hashrateSolo": 0,
+                "hashrateShared": 0,
+                "workersSolo": 0,
+                "workersShared": 0
+            },
+            {
+                "time": 1596070242,
+                "hashrateSolo": 1747.6266666666668,
+                "hashrateShared": 1747.6266666666668,
+                "workersSolo": 1,
+                "workersShared": 1,
+            },
+            ...
+        ]
+        ...
+    },
+}
+```
+* **Failure Response (400):**
+```
+{
+    endpoint: "history",
+    errors: "...",
+    data: {},
+}
+```

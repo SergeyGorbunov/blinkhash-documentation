@@ -1,4 +1,5 @@
-# Introduction
+Introduction
+----
 
 This repository contains the current documentation for the Blinkhash Mining Pools's backend REST API (v1). The API itself is relatively simple. Each of its endpoints were designed to be self-explanatory while still providing users with standardized JSON-formatted responses, making it easy to search, filter and use our data. The base URL for all requests is https://www.blinkhash.com/api/v1. The complete URL varies depending on the endpoint of the resource being accessed. For instance, you can view the statistics for each of our supported pools via a GET request to this URL: https://www.blinkhash.com/api/v1/statistics.
 
@@ -7,7 +8,8 @@ Need Support?
 
 If you need help with an API-related matter, the first place to look is our Discord channel, where the developers are available to answer any questions.
 
-# Documentation
+Documentation
+----
 
 Each of the following endpoints follow a simple structure, to promote ease of use. The status codes and JSON-formatted responses are standardized throughout. Regarding authentication, we've decided not to include any, in order to retain transparency and help our users remain anonymous. The endpoints themselves are also cached for two minutes, and consist of the following:
 
@@ -37,42 +39,38 @@ worker=[worker]
 * **Response (200):**
 ```
 {
-    endpoint: "blocks",
-    errors: "",
-    data: {
-        Blinkhash: [
-            {
-                "pool": "Blinkhash",
-                "symbol": "BHTC",
-                "algorithm": "scrypt",
-                "time": 1596089323305,
-                "height": 1416,
-                "blockHash": "ad8832bce1717f2e75da1104d3db929ca7f27cac0d98b325e0b512242d61a68d",
-                "blockReward":50,
-                "txHash":"291578aa7b9c7a0f254074b1b52df229fc493077abe9e3ea505c2e755529e648",
-                "worker":"M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi",
-                "soloMined":false,
-                "confirmed":false,
-                "confirmations":"1"
-            },
-            {
-                "pool": "Blinkhash",
-                "symbol": "BHTC",
-                "algorithm": "scrypt",
-                "time": 1596085696521,
-                "height": 1415,
-                "blockHash": "951c0fbcc035a27da35bb400f056be4030abc77d2d7b855761a17f2fedefddf4",
-                "blockReward": 50,
-                "txHash": "09d2b74894d6b314ce955a741394cdb1097c20bda94ac1ac5376b236bf4b180d",
-                "worker": "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi",
-                "soloMined": false,
-                "confirmed": false,
-                "confirmations": "2"
-            },
-            ...
-        ],
+    Blinkhash: [
+        {
+            "pool": "Blinkhash",
+            "symbol": "BHTC",
+            "algorithm": "scrypt",
+            "time": 1596089323305,
+            "height": 1416,
+            "blockHash": "ad8832bce1717f2e75da1104d3db929ca7f27cac0d98b325e0b512242d61a68d",
+            "blockReward":50,
+            "txHash":"291578aa7b9c7a0f254074b1b52df229fc493077abe9e3ea505c2e755529e648",
+            "worker":"M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi",
+            "soloMined":false,
+            "confirmed":false,
+            "confirmations":"1"
+        },
+        {
+            "pool": "Blinkhash",
+            "symbol": "BHTC",
+            "algorithm": "scrypt",
+            "time": 1596085696521,
+            "height": 1415,
+            "blockHash": "951c0fbcc035a27da35bb400f056be4030abc77d2d7b855761a17f2fedefddf4",
+            "blockReward": 50,
+            "txHash": "09d2b74894d6b314ce955a741394cdb1097c20bda94ac1ac5376b236bf4b180d",
+            "worker": "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi",
+            "soloMined": false,
+            "confirmed": false,
+            "confirmations": "2"
+        },
         ...
-    },
+    ],
+    ...
 }
 ```
 
@@ -93,27 +91,23 @@ pool=[pool]
 * **Response (200):**
 ```
 {
-    endpoint: "history",
-    errors: "",
-    data: {
-        Blinkhash: [
-            {
-                "time": 1596069584,
-                "hashrateSolo": 0,
-                "hashrateShared": 0,
-                "workersSolo": 0,
-                "workersShared": 0
-            },
-            {
-                "time": 1596070242,
-                "hashrateSolo": 1747.6266666666668,
-                "hashrateShared": 1747.6266666666668,
-                "workersSolo": 1,
-                "workersShared": 1,
-            },
-            ...
-        ]
+    Blinkhash: [
+        {
+            "time": 1596069584,
+            "hashrateSolo": 0,
+            "hashrateShared": 0,
+            "workersSolo": 0,
+            "workersShared": 0
+        },
+        {
+            "time": 1596070242,
+            "hashrateSolo": 1747.6266666666668,
+            "hashrateShared": 1747.6266666666668,
+            "workersSolo": 1,
+            "workersShared": 1,
+        },
         ...
-    },
+    ]
+    ...
 }
 ```

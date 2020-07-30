@@ -18,7 +18,7 @@ Each of the following endpoints follow a simple structure, to promote ease of us
 }
 ```
 
-The **Endpoint** field indicates the current endpoint, while the **Errors** field highlights any errors that may have arisen during the request. The **Data** field, on the other hand, contains the user's requested data.
+The **Endpoint** field indicates the current endpoint, while the **Errors** field highlights any errors that may have arisen during the request. The **Data** field, on the other hand, contains the user's requested data. In order to add parameters, append them to the end using the following syntax: **/endpoint?parameter=parameter**. If you need to add more than one parameter, you can separate them using the **&** symbol.
 
 ---
 

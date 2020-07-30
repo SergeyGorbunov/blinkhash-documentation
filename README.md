@@ -6,8 +6,6 @@ This repository contains the current documentation for the Blinkhash Mining Pool
 
 If you need help with an API-related matter, the first place to look is our Discord channel, where the developers are available to answer any questions.
 
----
-
 ## Documentation
 
 Each of the following endpoints follow a simple structure, to promote ease of use. The status codes and JSON-formatted responses are standardized throughout. Regarding authentication, we've decided not to include any, in order to retain transparency and help our users remain anonymous. The endpoints themselves are also cached for two minutes, and consist of the following:

@@ -36,7 +36,7 @@ The **Blocks** endpoint returns every block found by the users of the Blinkhash 
 pool=[pool]
 worker=[worker]
 ```
-* **Response (200):**
+* **Object (200):**
 ```
 {
     Blinkhash: [
@@ -79,8 +79,6 @@ History
 
 The **History** endpoint returns all historical data currently stored on the Blinkhash Mining Pool, separated into the individual pools supported. As this endpoint's main usage is for charting, each individual point of data is only stored for twelve hours (43200s) before being deleted.
 
-
-
 * **Method:** GET
 * **URL:** https://www.blinkhash.com/api/v1/history
 * **Required Parameters:** None 
@@ -88,7 +86,7 @@ The **History** endpoint returns all historical data currently stored on the Bli
 ```
 pool=[pool]
 ```
-* **Response (200):**
+* **Object (200):**
 ```
 {
     Blinkhash: [
@@ -107,6 +105,104 @@ pool=[pool]
             "workersShared": 1,
         },
         ...
+    ]
+    ...
+}
+```
+
+Partners
+----
+
+The **Partners** endpoint returns all currently active 'Partners' or 'Useful Links' for the Blinkhash Mining Pool. This most likely does not include all of them, however, as it only shows those with time left on their subscriptions.
+
+* **Method:** GET
+* **URL:** https://www.blinkhash.com/api/v1/partners
+* **Required Parameters:** None 
+* **Optional Parameters:** None
+* **Object (200):**
+```
+{
+    "Blinkhash": {
+        "name": "Blinkhash",
+        "type": "owner",
+        "tier": "",
+        "subscription": {
+            "startDate": "",
+            "endDate": ""
+        },
+        "url": "https://www.blinkhash.com/",
+        "image": ""
+    }
+}
+```
+
+Payments
+----
+
+The **Payments** endpoint displays information on any payments sent out to users of the Blinkhash Mining Pool.
+
+* **Method:** GET
+* **URL:** https://www.blinkhash.com/api/v1/payments
+* **Required Parameters:** None 
+* **Optional Parameters:** 
+```
+pool=[pool]
+worker=[worker]
+```
+* **Object (200):**
+```
+{
+    "Blinkhash":[
+        {
+            "time": 1596105713506,
+            "txid": "3a0e1a0383eb464dbe4d44a9c15fe2b714844b27b1fec124f95fae6b7c7d1962",
+            "shares": 176,
+            "workers": 3, 
+            "paid": 643.4948, 
+            "unpaid": {},
+            "records": [
+                {
+                    "height": 1317,
+                    "amounts": {
+                        "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 49.4996
+                    },
+                    "shares": {
+                        "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 16
+                    },
+                    "times": {
+                        "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 1
+                    }
+                },
+                {
+                    "height": 1318,
+                    "amounts": {
+                        "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 16.49986667,
+                        "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 32.99973333
+                    },
+                    "shares": {
+                        "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi":8,
+                        "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm":16
+                    },
+                    "times": {
+                        "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 0,
+                        "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 1
+                    }
+                },
+                ...
+            ],
+            "totals": {
+                "amounts": {
+                    "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 428.99653334,
+                    "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm":164.99866666, 
+                    "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y": 49.4996
+                },
+                "shares": {
+                    "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 112,
+                    "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 56,
+                    "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y": 8
+                }
+            }
+        }
     ]
     ...
 }

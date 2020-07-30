@@ -139,7 +139,7 @@ The **Partners** endpoint returns all currently active 'Partners' or 'Useful Lin
 Payments
 ----
 
-The **Payments** endpoint displays information on any payments sent out to users of the Blinkhash Mining Pool.
+The **Payments** endpoint displays information on any payments sent out to users of the Blinkhash Mining Pool, sorted by the time that they were sent out.
 
 * **Method:** GET
 * **URL:** https://www.blinkhash.com/api/v1/payments
@@ -202,7 +202,8 @@ worker=[worker]
                     "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y": 8
                 }
             }
-        }
+        },
+        ...
     ]
     ...
 }

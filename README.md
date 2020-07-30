@@ -153,7 +153,7 @@ worker=[worker]
 * **Object (200):**
 ```
 {
-    "Blinkhash":[
+    "Blinkhash": [
         {
             "time": 1596105713506,
             "txid": "3a0e1a0383eb464dbe4d44a9c15fe2b714844b27b1fec124f95fae6b7c7d1962",
@@ -416,3 +416,33 @@ worker=[worker]
 }
 ```
 
+---
+
+### Workers
+
+The **Workers** endpoint displays information on any currently active workers on the Blinkhash Mining Pool, .
+
+* **Method:** GET
+* **URL:** https://www.blinkhash.com/api/v1/workers
+* **Required Parameters:** 
+* **Optional Parameters:**
+```
+pool=[pool]
+```
+* **Object (200):**
+```
+{
+    "Blinkhash": [
+        {
+            "address":"bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y",
+            "difficulty":8,
+            "validShares":8,
+            "invalidShares":0,
+            "hashrate":1747.6266666666668,
+            "soloMining":true
+        },
+        ...
+    ],
+    ...
+}
+```

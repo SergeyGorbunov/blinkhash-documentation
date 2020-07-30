@@ -36,7 +36,7 @@ The **Blocks** endpoint returns every block found by the users of the Blinkhash 
 pool=[pool]
 worker=[worker]
 ```
-* **Success Response (200):**
+* **Response (200):**
 ```
 {
     endpoint: "blocks",
@@ -77,14 +77,6 @@ worker=[worker]
     },
 }
 ```
-* **Failure Response (400):**
-```
-{
-    endpoint: "blocks",
-    errors: "...",
-    data: {},
-}
-```
 
 History
 ----
@@ -100,7 +92,7 @@ The **History** endpoint returns all historical data currently stored on the Bli
 ```
 pool=[pool]
 ```
-* **Success Response (200):**
+* **Response (200):**
 ```
 {
     endpoint: "history",
@@ -125,13 +117,5 @@ pool=[pool]
         ]
         ...
     },
-}
-```
-* **Failure Response (400):**
-```
-{
-    endpoint: "history",
-    errors: "...",
-    data: {},
 }
 ```

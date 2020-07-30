@@ -208,3 +208,79 @@ worker=[worker]
     ...
 }
 ```
+
+Statistics
+----
+
+The **Statistics** endpoint displays basic information on each of the pools supported by the Blinkhash Mining Pool, including hashrate, ports, workers, and payments.
+
+* **Method:** GET
+* **URL:** https://www.blinkhash.com/api/v1/statistics
+* **Required Parameters:** None 
+* **Optional Parameters:** 
+```
+pool=[pool]
+```
+* **Object (200):**
+```
+{
+    "Blinkhash": {
+        "pool": "Blinkhash",
+        "symbol": "BHTC",
+        "algorithm": "scrypt",
+        "featured": true,
+        "ports": {
+            "3010": {
+                "enabled": true,
+                "soloMining": false,
+                "diff": 8,
+                "varDiff": {
+                    "minDiff": 8,
+                    "maxDiff": 512,
+                    "targetTime": 15,
+                    "retargetTime": 90,
+                    "variancePercent": 30
+                }
+            },
+            "3011": {
+                "enabled": true,
+                "soloMining": true,
+                "diff": 8,
+                "varDiff": {
+                    "minDiff": 8,
+                    "maxDiff": 512,
+                    "targetTime": 15,
+                    "retargetTime": 90,
+                    "variancePercent": 30
+                }
+            }
+        },
+        "statistics": {
+            "invalidShares": "1",
+            "lastPaid": "1596105725196",
+            "paymentFees": 1,
+            "paymentTime": 7200,
+            "paymentMinimum": 0.05,
+            "totalPaid": "643.49480000000000002",
+            "validShares": "242",
+            "validBlocks": "114",
+            "blocks": {
+                "lastHour": 12,
+                "last24Hours": 114,
+                "last7Days": 114
+            },
+            "hashrate": {
+                "hashrate": 0,
+                "hashrateShared": 0,
+                "hashrateSolo": 0
+            },
+            "workers": {
+                "workers": 0,
+                "workersShared": 0,
+                "workersSolo": 0
+            }
+        }
+    },
+    ...
+}
+```

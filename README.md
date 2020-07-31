@@ -345,7 +345,7 @@ worker=[worker]
         ...
     },
     "payments": {
-        "Blinkhash":[
+        "Blinkhash": [
             {
                 "time": 1596105713506,
                 "txid": "3a0e1a0383eb464dbe4d44a9c15fe2b714844b27b1fec124f95fae6b7c7d1962",

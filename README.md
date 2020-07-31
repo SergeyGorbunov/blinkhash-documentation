@@ -45,12 +45,12 @@ worker=[worker]
             "time": 1596089323305,
             "height": 1416,
             "blockHash": "ad8832bce1717f2e75da1104d3db929ca7f27cac0d98b325e0b512242d61a68d",
-            "blockReward":50,
-            "txHash":"291578aa7b9c7a0f254074b1b52df229fc493077abe9e3ea505c2e755529e648",
-            "worker":"M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi",
-            "soloMined":false,
-            "confirmed":false,
-            "confirmations":"1"
+            "blockReward": 50,
+            "txHash": "291578aa7b9c7a0f254074b1b52df229fc493077abe9e3ea505c2e755529e648",
+            "worker": "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi",
+            "soloMined": false,
+            "confirmed": false,
+            "confirmations": "1"
         },
         {
             "pool": "Blinkhash",
@@ -194,7 +194,7 @@ worker=[worker]
             "totals": {
                 "amounts": {
                     "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 428.99653334,
-                    "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm":164.99866666, 
+                    "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 164.99866666, 
                     "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y": 49.4996
                 },
                 "shares": {
@@ -318,12 +318,12 @@ worker=[worker]
                 "time": 1596084931511,
                 "height": 1408,
                 "blockHash": "9d7d0ee266822cde3fe228b720879bbeee550ba4377e988ddc18272ad3ad94b7",
-                "blockReward":50,
-                "txHash":"25282f5d30feb504fa4cbb0e76e14fe8f2275e733561161d9d32ce31227a5658",
-                "worker":"bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y",
-                "soloMined":true,
-                "confirmed":false,
-                "confirmations":"8"
+                "blockReward": 50,
+                "txHash": "25282f5d30feb504fa4cbb0e76e14fe8f2275e733561161d9d32ce31227a5658",
+                "worker": "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y",
+                "soloMined": true,
+                "confirmed": false,
+                "confirmations": "8"
             },
             {
                 "pool": "Blinkhash",
@@ -372,8 +372,8 @@ worker=[worker]
                             "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 32.99973333
                         },
                         "shares": {
-                            "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi":8,
-                            "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm":16
+                            "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 8,
+                            "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 16
                         },
                         "times": {
                             "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 0,
@@ -385,7 +385,7 @@ worker=[worker]
                 "totals": {
                     "amounts": {
                         "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 428.99653334,
-                        "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm":164.99866666, 
+                        "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 164.99866666, 
                         "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y": 49.4996
                     },
                     "shares": {
@@ -434,12 +434,12 @@ pool=[pool]
 {
     "Blinkhash": [
         {
-            "address":"bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y",
-            "difficulty":8,
-            "validShares":8,
-            "invalidShares":0,
-            "hashrate":1747.6266666666668,
-            "soloMining":true
+            "address": "bhtc1qdf3ant3rvw4szsvum4fefu5mr8k83y7nd5g39y",
+            "difficulty": 8,
+            "validShares": 8,
+            "invalidShares": 0,
+            "hashrate": 1747.6266666666668,
+            "soloMining": true
         },
         ...
     ],

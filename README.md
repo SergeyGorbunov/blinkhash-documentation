@@ -181,8 +181,8 @@ worker=[worker]
                         "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 32.99973333
                     },
                     "shares": {
-                        "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi":8,
-                        "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm":16
+                        "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 8,
+                        "MRAF5XR5cpdtff7w5R6tymHzBqAjszb3wm": 16
                     },
                     "times": {
                         "M8aXXv5gC2bj7XKnP5mmBgjGg6if6k2QTi": 0,

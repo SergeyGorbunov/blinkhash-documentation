@@ -132,7 +132,8 @@ The **Partners** endpoint returns all currently active 'Partners' or 'Useful Lin
         },
         "url": "https://www.blinkhash.com/",
         "image": ""
-    }
+    },
+    ...
 }
 ```
 

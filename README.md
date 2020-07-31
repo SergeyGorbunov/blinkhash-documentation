@@ -24,7 +24,7 @@ The **Endpoint** field indicates the current endpoint, while the **Errors** fiel
 
 ### Blocks
 
-The **Blocks** endpoint returns every block found by the users of the Blinkhash Mining Pool, separated into the individual pools supported and sorted by block height.  
+The **Blocks** endpoint returns every block found by Blinkhash users, separated into the individual pools supported and sorted by block height.  
 
 * **Method:** GET
 * **URL:** https://www.blinkhash.com/api/v1/blocks
@@ -76,7 +76,7 @@ worker=[worker]
 
 ### History
 
-The **History** endpoint returns all historical data currently stored on the Blinkhash Mining Pool, separated into the individual pools supported. As this endpoint's main usage is for charting, each individual point of data is only stored for twelve hours (43200s) before being deleted.
+The **History** endpoint returns all historical data currently stored on Blinkhash, separated into the individual pools supported. As this endpoint's main usage is for charting, each individual point of data is only stored for twelve hours (43200s) before being deleted.
 
 * **Method:** GET
 * **URL:** https://www.blinkhash.com/api/v1/history
@@ -113,7 +113,7 @@ pool=[pool]
 
 ### Partners
 
-The **Partners** endpoint returns all currently active 'Partners' or 'Useful Links' for the Blinkhash Mining Pool. This most likely does not include all of them, however, as it only shows those with time left on their subscriptions.
+The **Partners** endpoint returns all of Blinkhash's currently active 'Partners' or 'Useful Links'. This most likely does not include all of them, however, as it only shows those with time left on their subscriptions.
 
 * **Method:** GET
 * **URL:** https://www.blinkhash.com/api/v1/partners
@@ -141,7 +141,7 @@ The **Partners** endpoint returns all currently active 'Partners' or 'Useful Lin
 
 ### Payments
 
-The **Payments** endpoint displays information on any payments sent out to users of the Blinkhash Mining Pool, sorted by the time that they were sent out.
+The **Payments** endpoint displays information on any payments sent out to Blinkhash users, sorted by the time that they were sent out.
 
 * **Method:** GET
 * **URL:** https://www.blinkhash.com/api/v1/payments
@@ -215,7 +215,7 @@ worker=[worker]
 
 ### Statistics
 
-The **Statistics** endpoint displays basic information on each of the pools supported by the Blinkhash Mining Pool, including hashrate, ports, workers, and payments.
+The **Statistics** endpoint displays basic information on each of Blinkhash's supported pools, including hashrate, ports, workers, and payments.
 
 * **Method:** GET
 * **URL:** https://www.blinkhash.com/api/v1/statistics
@@ -421,7 +421,7 @@ worker=[worker]
 
 ### Workers
 
-The **Workers** endpoint displays information on any currently active workers on the Blinkhash Mining Pool, .
+The **Workers** endpoint displays information on any of Blinkhash's currently active workers.
 
 * **Method:** GET
 * **URL:** https://www.blinkhash.com/api/v1/workers

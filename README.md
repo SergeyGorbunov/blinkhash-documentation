@@ -4,7 +4,7 @@ This repository contains the current documentation for the Blinkhash Mining Pool
 
 ### Need Support?
 
-If you need help with an API-related matter, the first place to look is our Discord channel, where the developers are available to answer any questions.
+If you need help with an API or code-related matter, the first place to look is our [Discord](https://www.discord.gg/x2vgyZP), where I'll be available to answer any questions. Please do not come to me with issues regarding how to clone/setup the server. Use Google for that.
 
 ## Documentation
 
